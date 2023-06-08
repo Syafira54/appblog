@@ -8,7 +8,8 @@ final class Init extends AbstractMigration
     protected function up(): void
     {
         $this->table('user')
-        ->addColumn('username', 'string', ['length' => 64])
+        ->addColumn('id', 'integer', ['autoincrement' => true])
+        ->addColumn('username', 'string')
         ->addColumn('password', 'string')
         ->addColumn('created_at', 'datetime')
         ->addColumn('updated_at', 'datetime', ['null' => true])
