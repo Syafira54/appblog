@@ -6,7 +6,7 @@
 <article class="blog-post">
         <h2 class="display-5 link-body-emphasis mb-1"><?php echo e($post->title); ?></h2>
         <p class="blog-post-meta"><?php echo e($post->created_at->isoFormat('MMMM DD, YYYY - h:mm:ss a')); ?></p>
-        <p class="blog-post-meta"><?php echo e($post->article); ?></p>
+        <p class="blog-post-meta"><?php echo e(substr($post->article, 0, 200)); ?></p>
       </article>
 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 <?php $__env->stopSection(); ?>
